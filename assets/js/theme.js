@@ -22,3 +22,7 @@ $(document).ready(function () {
         $(".offcanvas button").click();
     });
 });
+
+var smoothscroll = require("smoothscroll-polyfill");
+
+smoothscroll.polyfill();
