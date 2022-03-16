@@ -30,7 +30,6 @@ function jsTask() {
         "node_modules/@popperjs/core/dist/umd/popper.js",
         "node_modules/swiper/swiper-bundle.js",
         "node_modules/headroom.js/dist/headroom.js",
-        "node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js",
     ])
         .pipe(dest(themeDir + "/assets/js"))
 }
