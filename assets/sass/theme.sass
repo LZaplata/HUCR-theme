@@ -133,16 +133,18 @@ header
             background-position: center -18%
             transition: background-position .5s ease
 
-            &:hover
-                background-position: center 30%
+            @media (any-hover: hover)
+                &:hover
+                    background-position: center 30%
 
             @include media-breakpoint-up(xl)
                 width: 173px
                 height: 46px
                 background-position: center -30%
 
-                &:hover
-                    background-position: center 36%
+                @media (any-hover: hover)
+                    &:hover
+                        background-position: center 36%
 
     #menu
         .nav
