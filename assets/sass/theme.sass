@@ -128,21 +128,23 @@ header
             -webkit-mask: url("../images/logo.svg")
             mask-size: cover
             -webkit-mask-size: cover
-            background-image: url("../images/btn-white-bg.svg")
-            background-repeat: no-repeat
-            background-position: center -18%
-            transition: background-position .5s ease
 
             @media (any-hover: hover)
+                background-image: url("../images/btn-white-bg.svg")
+                background-repeat: no-repeat
+                background-position: center -18%
+                transition: background-position .5s ease
+
                 &:hover
                     background-position: center 30%
 
             @include media-breakpoint-up(xl)
                 width: 173px
                 height: 46px
-                background-position: center -30%
 
                 @media (any-hover: hover)
+                    background-position: center -30%
+
                     &:hover
                         background-position: center 36%
 
@@ -156,29 +158,30 @@ header
                         margin-left: 60px
 
                 a
-                    &:not(.contact)
-                        &:before
-                            content: attr(data-hover)
-                            position: absolute
-                            top: 0
-                            left: 0
-                            overflow: hidden
-                            padding-bottom: 7px
-                            max-width: 0
-                            border-bottom: 3px solid $secondary
-                            color: $secondary
-                            transition: .5s max-width ease
-                            white-space: nowrap
-
-                        &:hover
+                    @media (any-hover: hover)
+                        &:not(.contact)
                             &:before
-                                max-width: 100%
+                                content: attr(data-hover)
+                                position: absolute
+                                top: 0
+                                left: 0
+                                overflow: hidden
+                                padding-bottom: 7px
+                                max-width: 0
+                                border-bottom: 3px solid $secondary
+                                color: $secondary
+                                transition: .5s max-width ease
+                                white-space: nowrap
 
-                    .contact
-                        background-position: right -30%
+                            &:hover
+                                &:before
+                                    max-width: 100%
 
-                        &:hover
-                            background-position: right 24%
+                        .contact
+                            background-position: right -30%
+
+                            &:hover
+                                background-position: right 24%
 
     #menu-toggle
         a
@@ -188,13 +191,15 @@ header
             -webkit-mask: url("../images/icons/list.svg")
             mask-size: cover
             -webkit-mask-size: cover
-            background-image: url("../images/btn-secondary-bg.svg")
-            background-repeat: no-repeat
-            background-position: right -25%
-            transition: background-position .5s ease
 
-            &:hover
-                background-position: right 8%
+            @media (any-hover: hover)
+                background-image: url("../images/btn-secondary-bg.svg")
+                background-repeat: no-repeat
+                background-position: right -25%
+                transition: background-position .5s ease
+
+                &:hover
+                    background-position: right 8%
 
 @keyframes words
     20%
