@@ -1,29 +1,30 @@
 @import "variables"
 
 .btn
-    overflow: hidden
-    background-position: right -37%
-    background-repeat: no-repeat
-    transition: background-position .5s ease
-
-    &.btn-lg
-        background-position: right -65%
-
-    &:hover
-        background-position: right 30%
-
-        span
-            &.arrow
-                &.right
-                    &:before
-                        left: 5px
+    @media (any-hover: hover)
+        overflow: hidden
+        background-position: right -37%
+        background-repeat: no-repeat
+        transition: background-position .5s ease
 
         &.btn-lg
-            background-position: right 40%
+            background-position: right -65%
 
-    &.with-arrow
         &:hover
-            background-position: right 35%
+            background-position: right 30%
+
+            span
+                &.arrow
+                    &.right
+                        &:before
+                            left: 5px
+
+            &.btn-lg
+                background-position: right 40%
+
+        &.with-arrow
+            &:hover
+                background-position: right 35%
 
     span
         &.arrow
@@ -51,22 +52,26 @@
 
 .btn-outline-secondary
     @include button-variant(transparent, $secondary, $white, transparent, $secondary, $white, transparent, $secondary, $white)
-    background-image: url("../images/btn-secondary-bg.svg")
+
+    @media (any-hover: hover)
+        background-image: url("../images/btn-secondary-bg.svg")
 
 .btn-outline-white
     @include button-variant(transparent, $white, $primary, transparent, $white, $primary, transparent, $white, $primary)
-    background-image: url("../images/btn-white-bg.svg")
+
+    @media (any-hover: hover)
+        background-image: url("../images/btn-white-bg.svg")
+
+        &:hover
+            span
+                &.arrow
+                    &:before
+                        background-color: $primary
 
     span
         &.arrow
             &:before
                 background-color: $white
-
-    &:hover
-        span
-            &.arrow
-                &:before
-                    background-color: $primary
 
 html
     scroll-behavior: smooth
@@ -286,12 +291,13 @@ header
             &:after
                 bottom: -55px
 
-            &:hover
-                &:before
-                    bottom: -45px
+            @media (any-hover: hover)
+                &:hover
+                    &:before
+                        bottom: -45px
 
-                &:after
-                    bottom: -63px
+                    &:after
+                        bottom: -63px
 
 #reference
     margin-top: 155px
@@ -384,10 +390,10 @@ header
                     text-align: center
                     font-size: $font-size-24 !important
 
-                    //&:not(.contact)
+                    &:not(.contact)
                         padding: map-get($spacers, 3) 0
 
-                        &:before
+                        //&:before
                             content: attr(data-hover)
                             position: absolute
                             top: map-get($spacers, 3)
@@ -400,11 +406,11 @@ header
                             transition: .5s max-width ease
                             white-space: nowrap
 
-                        &:hover
+                        //&:hover
                             &:before
                                 max-width: 100%
 
-                    //&.contact
+                    &.contact
                         background-position: right -45% !important
 
                         &:hover
@@ -418,10 +424,12 @@ header
                 -webkit-mask: url("../images/icons/facebook.svg")
                 mask-size: cover
                 -webkit-mask-size: cover
-                background-image: url("../images/btn-secondary-bg.svg")
-                background-repeat: no-repeat
-                background-position: right -25%
-                transition: background-position .5s ease
 
-                &:hover
-                    background-position: right 8%
+                //@media (any-hover: hover)
+                    background-image: url("../images/btn-secondary-bg.svg")
+                    background-repeat: no-repeat
+                    background-position: right -25%
+                    transition: background-position .5s ease
+
+                    &:hover
+                        background-position: right 8%
