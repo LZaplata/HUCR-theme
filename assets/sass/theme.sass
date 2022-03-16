@@ -393,28 +393,30 @@ header
                     &:not(.contact)
                         padding: map-get($spacers, 3) 0
 
-                        &:before
-                            content: attr(data-hover)
-                            position: absolute
-                            top: map-get($spacers, 3)
-                            left: 0
-                            overflow: hidden
-                            padding-bottom: 7px
-                            max-width: 0
-                            border-bottom: 3px solid $secondary
-                            color: $secondary
-                            transition: .5s max-width ease
-                            white-space: nowrap
-
-                        &:hover
+                        @media (any-hover: hover)
                             &:before
-                                max-width: 100%
+                                content: attr(data-hover)
+                                position: absolute
+                                top: map-get($spacers, 3)
+                                left: 0
+                                overflow: hidden
+                                padding-bottom: 7px
+                                max-width: 0
+                                border-bottom: 3px solid $secondary
+                                color: $secondary
+                                transition: .5s max-width ease
+                                white-space: nowrap
 
-                    &.contact
-                        background-position: right -45% !important
+                            &:hover
+                                &:before
+                                    max-width: 100%
 
-                        &:hover
-                            background-position: right 30% !important
+                    @media (any-hover: hover)
+                        &.contact
+                            background-position: right -45% !important
+
+                            &:hover
+                                background-position: right 30% !important
 
         .socials
             a
