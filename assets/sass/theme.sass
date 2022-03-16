@@ -393,7 +393,7 @@ header
                     &:not(.contact)
                         padding: map-get($spacers, 3) 0
 
-                        //&:before
+                        &:before
                             content: attr(data-hover)
                             position: absolute
                             top: map-get($spacers, 3)
@@ -406,7 +406,7 @@ header
                             transition: .5s max-width ease
                             white-space: nowrap
 
-                        //&:hover
+                        &:hover
                             &:before
                                 max-width: 100%
 
@@ -425,7 +425,7 @@ header
                 mask-size: cover
                 -webkit-mask-size: cover
 
-                //@media (any-hover: hover)
+                @media (any-hover: hover)
                     background-image: url("../images/btn-secondary-bg.svg")
                     background-repeat: no-repeat
                     background-position: right -25%
