@@ -14,4 +14,11 @@ $(document).ready(function () {
             clickable: true,
         },
     });
+
+
+    // hide offcanvas on menu link click
+
+    $(".offcanvas .nav li a").click(function () {
+        $(".offcanvas button").click();
+    });
 });
