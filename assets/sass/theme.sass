@@ -71,6 +71,11 @@
 html
     scroll-behavior: smooth
 
+body
+    background-image: url("../images/gradient.png")
+    background-position: top center
+    background-size: cover
+
 .hero
     background-image: url("../images/banner/layer01.png")
     background-repeat: no-repeat
@@ -226,7 +231,7 @@ header
     @include media-breakpoint-up(lg)
         margin-top: 225px
 
-    @include media-breakpoint-up(lg)
+    @include media-breakpoint-up(xl)
         margin-top: 250px
 
     @include media-breakpoint-up(xxl)
@@ -237,7 +242,10 @@ header
 
         .words
             margin-top: -2px
-            margin-left: 15px
+            margin-left: 0
+
+            @include media-breakpoint-up(md)
+                margin-left: 15px
 
             span
                 padding-top: 2px
@@ -292,7 +300,7 @@ header
     @include media-breakpoint-up(lg)
         margin-top: 280px
 
-    @include media-breakpoint-up(lg)
+    @include media-breakpoint-up(xl)
         margin-top: 450px
 
     @include media-breakpoint-up(xxl)
