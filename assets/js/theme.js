@@ -21,8 +21,14 @@ $(document).ready(function () {
     $(".offcanvas .nav li a").click(function () {
         $(".offcanvas button").click();
     });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
-
-var smoothscroll = require("smoothscroll-polyfill");
-
-smoothscroll.polyfill();
