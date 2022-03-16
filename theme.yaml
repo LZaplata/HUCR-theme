@@ -1,0 +1,11 @@
+name: 'Humlnet Creative'
+description: 'Theme for webdesign agency Humlnet Creative from Trutnov.'
+author: 'Lukáš Záplata'
+homepage: ''
+authorCode: LZaplata
+code: hucr
+parent: ''
+database: '0'
+require:
+    - martin.forms
+    - rainlab.blog

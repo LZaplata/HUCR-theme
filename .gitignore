@@ -1,0 +1,7 @@
+meta
+assets/css/*.*
+assets/css/fonts/bootstrap-icons.woff
+assets/css/fonts/bootstrap-icons.woff2
+assets/js/*
+!assets/js/theme.js
+.themelock

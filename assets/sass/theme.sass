@@ -1,0 +1,415 @@
+@import "variables"
+
+.btn
+    overflow: hidden
+    background-position: right -37%
+    background-repeat: no-repeat
+    transition: background-position .5s ease
+
+    &.btn-lg
+        background-position: right -65%
+
+    &:hover
+        background-position: right 30%
+
+        span
+            &.arrow
+                &.right
+                    &:before
+                        left: 5px
+
+        &.btn-lg
+            background-position: right 40%
+
+    &.with-arrow
+        &:hover
+            background-position: right 35%
+
+    span
+        &.arrow
+            width: 35px
+            height: 1px
+            display: inline-block
+            position: relative
+            overflow: visible
+
+            &:before
+                content: ""
+                width: 100%
+                height: 45px
+                mask-size: cover
+                position: absolute
+                bottom: -15px
+                transition: all .5s ease
+
+            &.right
+                &:before
+                    mask-image: url("../images/icons/arrow-right-short.svg")
+                    left: 0
+
+.btn-outline-secondary
+    @include button-variant(transparent, $secondary, $white, transparent, $secondary, $white, transparent, $secondary, $white)
+    background-image: url("../images/btn-secondary-bg.svg")
+
+.btn-outline-white
+    @include button-variant(transparent, $white, $primary, transparent, $white, $primary, transparent, $white, $primary)
+    background-image: url("../images/btn-white-bg.svg")
+
+    span
+        &.arrow
+            &:before
+                background-color: $white
+
+    &:hover
+        span
+            &.arrow
+                &:before
+                    background-color: $primary
+
+html
+    scroll-behavior: smooth
+
+//body
+    //background-image: url("../images/banner/layer02.png"), url("../images/banner/layer01.png")
+    //background-repeat: no-repeat
+    //background-size: cover
+    //background-position-x: center
+    //background-position-y: top
+
+.hero
+    background-image: url("../images/banner/layer01.png")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position-y: top
+    background-position-x: center
+    height: 1200px
+
+    @include media-breakpoint-up(sm)
+        height: 1300px
+
+    @include media-breakpoint-up(md)
+        background-image: url("../images/banner/layer02.png"), url("../images/banner/layer01.png")
+        background-size: 100%, cover
+        background-position-y: 260px, top
+
+    @include media-breakpoint-up(lg)
+        height: 1500px
+        background-size: 120%, cover
+        background-position-y: 195px, top
+
+    @include media-breakpoint-up(xl)
+        height: 1650px
+
+    @include media-breakpoint-up(xxl)
+        height: 1863px
+        background-size: cover
+        background-position-y: 50px, top
+
+header
+    z-index: 10
+
+    &.headroom
+        transition: $transition-base
+
+        &--pinned
+            transform: translateY(0%)
+
+        &--unpinned
+            transform: translateY(-100%)
+
+        &--not-top
+            background: $blue-dark
+
+    #logo
+        a
+            width: 132px
+            height: 35px
+            mask: url("../images/logo.svg")
+            -webkit-mask: url("../images/logo.svg")
+            mask-size: cover
+            background-image: url("../images/btn-white-bg.svg")
+            background-repeat: no-repeat
+            background-position: center -18%
+            transition: background-position .5s ease
+
+            &:hover
+                background-position: center 30%
+
+            @include media-breakpoint-up(xl)
+                width: 173px
+                height: 46px
+                background-position: center -30%
+
+                &:hover
+                    background-position: center 36%
+
+    #menu
+        .nav
+            li
+                & + li
+                    margin-left: 80px
+
+                    @include media-breakpoint-down(xxl)
+                        margin-left: 60px
+
+                a
+                    &:not(.contact)
+                        &:before
+                            content: attr(data-hover)
+                            position: absolute
+                            top: 0
+                            left: 0
+                            overflow: hidden
+                            padding-bottom: 7px
+                            max-width: 0
+                            border-bottom: 3px solid $secondary
+                            color: $secondary
+                            transition: .5s max-width ease
+                            white-space: nowrap
+
+                        &:hover
+                            &:before
+                                max-width: 100%
+
+                    .contact
+                        background-position: right -30%
+
+                        &:hover
+                            background-position: right 24%
+
+    #menu-toggle
+        a
+            width: 35px
+            height: 35px
+            mask: url("../images/icons/list.svg")
+            -webkit-mask: url("../images/icons/list.svg")
+            mask-size: cover
+            background-image: url("../images/btn-secondary-bg.svg")
+            background-repeat: no-repeat
+            background-position: right -25%
+            transition: background-position .5s ease
+
+            &:hover
+                background-position: right 8%
+
+@keyframes words
+    20%
+        transform: translateY(0)
+
+    25%
+        transform: translateY(-100%)
+
+    45%
+        transform: translateY(-100%)
+
+    50%
+        transform: translateY(-200%)
+
+    70%
+        transform: translateY(-200%)
+
+    75%
+        transform: translateY(-300%)
+
+    95%
+        transform: translateY(-300%)
+
+    100%
+        transform: translateY(-400%)
+
+#claim
+    margin-top: 153px
+
+    @include media-breakpoint-up(sm)
+        margin-top: 160px
+
+    @include media-breakpoint-up(md)
+        margin-top: 180px
+
+    @include media-breakpoint-up(lg)
+        margin-top: 225px
+
+    @include media-breakpoint-up(lg)
+        margin-top: 250px
+
+    @include media-breakpoint-up(xxl)
+        margin-top: 270px
+
+    .first-line
+        @include rfs($font-size-81 * $line-height-sm, height)
+
+        .words
+            margin-top: -2px
+            margin-left: 15px
+
+            span
+                padding-top: 2px
+                animation-name: words
+                animation-duration: 15s
+                animation-iteration-count: infinite
+
+    .works
+        a
+            &:before, &:after
+                content: ""
+                left: 50%
+                position: absolute
+                mask: url("../images/icons/chevron-down.svg")
+                -webkit-mask: url("../images/icons/chevron-down.svg")
+                mask-size: cover
+                background-color: $secondary
+                width: 30px
+                height: 30px
+                transform: translateX(-50%)
+                transition: bottom .5s ease
+
+                @include media-breakpoint-up(lg)
+                    width: 40px
+                    height: 30px
+
+            &:before
+                bottom: -40px
+
+            &:after
+                bottom: -55px
+
+            &:hover
+                &:before
+                    bottom: -45px
+
+                &:after
+                    bottom: -63px
+
+#reference
+    margin-top: 155px
+    padding-top: $grid-gutter-width
+
+    height: 30000px !important
+
+    @include media-breakpoint-up(sm)
+        margin-top: 260px
+
+    @include media-breakpoint-up(md)
+        padding-top: 50px
+        margin-top: 240px
+
+    @include media-breakpoint-up(lg)
+        margin-top: 280px
+
+    @include media-breakpoint-up(lg)
+        margin-top: 450px
+
+    @include media-breakpoint-up(xxl)
+        margin-top: 550px
+
+    .swiper
+        .swiper-wrapper
+            .swiper-slide
+                .heading
+                    line-height: 1.1
+
+        .swiper-pagination
+            position: relative
+            margin-top: map-get($spacers, 4)
+
+            @include media-breakpoint-up(lg)
+                margin-top: 50px
+
+            &-bullet
+                width: 20px
+                height: 20px
+                background-color: $primary
+                opacity: 1
+
+                &-active
+                    background-color: $secondary
+
+//#cenik
+    .room
+        .row
+            .capacity, .price
+                .card
+                    &.h-100
+                        @include media-breakpoint-down(xl)
+                            height: auto !important
+
+//#prohibitions
+    img
+        @include media-breakpoint-up(xl)
+            max-width: 86px
+
+//#kontakt
+    form
+        .input-group
+            .input-group-text
+                padding-right: 0
+
+            .form-control
+                padding-left: .5rem
+
+    .address
+        img
+            @include media-breakpoint-down(sm)
+                height: 20px
+
+            @include media-breakpoint-down(lg)
+                height: 25px
+
+//#copyright
+    .signature
+        span
+            mask: url("../images/signature.svg")
+            -webkit-mask: url("../images/signature.svg")
+            width: 85px
+            height: 25px
+            mask-size: cover
+            display: block
+
+#offcanvas
+    .offcanvas-body
+        .nav
+            li
+                a
+                    text-align: center
+                    font-size: $font-size-24 !important
+
+                    &:not(.contact)
+                        padding: map-get($spacers, 3) 0
+
+                        &:before
+                            content: attr(data-hover)
+                            position: absolute
+                            top: map-get($spacers, 3)
+                            left: 0
+                            overflow: hidden
+                            padding-bottom: 7px
+                            max-width: 0
+                            border-bottom: 3px solid $secondary
+                            color: $secondary
+                            transition: .5s max-width ease
+                            white-space: nowrap
+
+                        &:hover
+                            &:before
+                                max-width: 100%
+
+                    &.contact
+                        background-position: right -45% !important
+
+                        &:hover
+                            background-position: right 30% !important
+
+        .socials
+            a
+                width: 35px
+                height: 35px
+                mask: url("../images/icons/facebook.svg")
+                -webkit-mask: url("../images/icons/facebook.svg")
+                mask-size: cover
+                background-image: url("../images/btn-secondary-bg.svg")
+                background-repeat: no-repeat
+                background-position: right -25%
+                transition: background-position .5s ease
+
+                &:hover
+                    background-position: right 8%

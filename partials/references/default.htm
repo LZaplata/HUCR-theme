@@ -1,0 +1,37 @@
+{% set posts = __SELF__.posts %}
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+        {% for post in posts %}
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-3 col-lg-6 offset-lg-0 col-xl-7 col-xxl-8 monitor">
+                        <img src="{{ 'assets/images/monitor.png'|theme }}" alt="monitor" class="img-fluid">
+                    </div>
+
+                    <div class="col-12 col-lg-6 col-xl-5 col-xxl-4 d-flex align-items-center mt-4 text-center text-lg-start mt-lg-0">
+                        <div class="ms-lg-4 ms-xxl-0">
+                            <p class="h2 fst-italic mb-3 heading">
+                                {{ post.title }}
+                            </p>
+
+                            <p class="mb-0">
+                                {{ post.content }}
+                            </p>
+
+                            {% if post.excerpt %}
+                                <p class="mt-4 mt-xl-5">
+                                    <a href="{{ post.excerpt }}" target="_blank" class="btn btn-outline-white text-uppercase with-arrow">
+                                        navštívit web <span class="arrow right"></span>
+                                    </a>
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="swiper-pagination"></div>
+</div>

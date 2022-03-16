@@ -1,0 +1,8 @@
+{
+    "name": "lzaplata/hucr-theme",
+    "type": "october-theme",
+    "description": "Theme for webdesign agency Humlnet Creative from Trutnov.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

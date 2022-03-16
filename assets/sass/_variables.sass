@@ -1,0 +1,113 @@
+@import "fonts"
+
+/***** override bootstrap variables *****/
+
+$font-family-argentum:              "Argentum Sans", sans-serif
+$font-family-archivo:               "Archivo Condensed", sans-serif
+$font-family-mohave:                "Mohave", sans-serif
+
+$font-size-16:                      1rem
+$font-size-20:                      1.25rem
+$font-size-24:                      1.5rem
+$font-size-58:                      3.625rem
+$font-size-81:                      5.0625rem
+$font-size-base:                    $font-size-20
+
+$font-weight-light:                 300
+$font-weight-normal:                400
+$font-weight-medium:                500
+$font-weight-extra-bold:            800
+
+$primary:                           #26263a
+$secondary:                         #18baaf
+$red:                               #ed5656
+$green:                             #61ddd1
+$green-light:                       #9ae8df
+$white:                             #ffffff
+$blue-dark:                         #223854
+
+$font-family-base:                  $font-family-argentum
+$font-weight-base:                  $font-weight-light
+
+$body-color:                        $primary
+
+$headings-font-family:              $font-family-mohave
+$headings-font-weight:              $font-weight-medium
+$headings-color:                    $primary
+
+$h1-font-size:                      $font-size-81
+$h2-font-size:                      $font-size-58
+
+$link-decoration:                   none
+
+$nav-link-font-size:                $font-size-16
+$nav-link-font-weight:              $font-weight-extra-bold
+$nav-link-color:                    $white
+$nav-link-hover-color:              $white
+$nav-link-padding-x:                0
+$nav-link-padding-y:                0
+
+$offcanvas-bg-color:                $primary
+$offcanvas-color:                   $white
+
+$btn-close-color:                   $white
+$btn-close-focus-shadow:            none
+$btn-font-family:                   $font-family-archivo
+$btn-font-weight:                   $font-weight-extra-bold
+$btn-font-size:                     $font-size-20
+$btn-border-radius:                 3rem
+$btn-border-width:                  3px
+$btn-padding-y:                     .5rem
+$btn-padding-x:                     2.5rem
+$btn-focus-width:                   0
+$btn-font-size-lg:                  $font-size-24
+$btn-padding-y-lg:                  .9rem
+$btn-padding-x-lg:                  3.5rem
+$btn-border-radius-lg:              4rem
+
+$line-height-sm:                    1.2
+
+//$card-border-radius:                1.5rem
+//$card-bg:                           $secondary
+//$card-border-width:                 0
+//$card-color:                        $primary
+//$card-spacer-x:                     1.5rem
+//$card-spacer-y:                     1rem
+//
+//$input-placeholder-color:           $primary
+//$input-font-size:                   $font-size-15
+//$input-font-weight:                 $font-weight-normal
+//$input-border-color:                $white
+//$input-border-radius:               2rem
+//$input-padding-x:                   1.3rem
+//$input-padding-y:                   .6rem
+//$input-focus-border-color:          $white
+//$input-focus-box-shadow:            none
+//$input-group-addon-bg:              $white
+//$input-group-addon-color:           $primary
+
+@import "bootstrap/scss/functions"
+@import "bootstrap/scss/variables"
+
+/***** add new theme colors *****/
+
+$custom-colors:                     ("red": $red, "green": $green, "green-light": $green-light, "white": $white, "blue-dark": $blue-dark)
+$theme-colors:                      map-merge($theme-colors, $custom-colors)
+$theme-colors-rgb:                  map-loop($theme-colors, to-rgb, "$value")
+$utilities-colors:                  map-merge($utilities-colors, $custom-colors)
+$utilities-text-colors:             map-loop($utilities-colors, rgba-css-var, "$key", "text")
+$utilities-bg-colors:               map-loop($utilities-colors, rgba-css-var, "$key", "bg")
+
+@import "bootstrap/scss/utilities"
+
+/***** add new utilities *****/
+
+$utilities:                         map-merge($utilities, ("font-weight": map-merge(map-get($utilities, "font-weight"), (values: map-merge(map-get(map-get($utilities, "font-weight"), "values"), ("normal": $font-weight-normal, "extra-bold": $font-weight-extra-bold))))))
+$utilities:                         map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"), (values: map-merge(map-get(map-get($utilities, "font-size"), "values"), (16: $font-size-16, 20: $font-size-20, 24: $font-size-24, 58: $font-size-58, 81: $font-size-81))))))
+$utilities:                         map-merge($utilities, ("font-family": (property: font-family, class: ff, values: ("base": $font-family-base, "argentum": $font-family-argentum, "archivo": $font-family-archivo, "mohave": $font-family-mohave))))
+$utilities:                         map-merge($utilities, ("color-hover": (property: color, class: text, values: ("secondary": $secondary), state: hover)))
+////$utilities:                         map-merge($utilities, ("border-hover": (property: border-color, class: border, values: ("secondary": $secondary), state: hover)))
+//$utilities:                         map-merge($utilities, ("bg-hover": (property: background-color, class: bg, values: ("secondary": $secondary), state: hover)))
+$utilities:                         map-merge($utilities, ("transition": (property: transition, class: transition, values: ("base": $transition-base))))
+
+@import "bootstrap/scss/bootstrap"

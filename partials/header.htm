@@ -1,0 +1,15 @@
+<header class="container-fluid py-4 position-fixed">
+    <div class="container-lg d-flex justify-content-between align-items-center">
+        <div id="logo">
+            <a href="{{ 'homepage'|page }}" class="d-block bg-secondary"></a>
+        </div>
+
+        <div id="menu" class="d-none d-xl-flex">
+            {% partial "menu" %}
+        </div>
+
+        <div id="menu-toggle" class="d-xl-none">
+            <a href="#offcanvas" class="bg-white d-flex" data-bs-toggle="offcanvas"></a>
+        </div>
+    </div>
+</header>
