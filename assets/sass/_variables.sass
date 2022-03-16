@@ -25,6 +25,7 @@ $green:                             #61ddd1
 $green-light:                       #9ae8df
 $white:                             #ffffff
 $blue-dark:                         #223854
+$pink:                              #ff737e
 
 $font-family-base:                  $font-family-argentum
 $font-weight-base:                  $font-weight-light
@@ -91,7 +92,7 @@ $line-height-sm:                    1.2
 
 /***** add new theme colors *****/
 
-$custom-colors:                     ("red": $red, "green": $green, "green-light": $green-light, "white": $white, "blue-dark": $blue-dark)
+$custom-colors:                     ("red": $red, "green": $green, "green-light": $green-light, "white": $white, "blue-dark": $blue-dark, "pink": $pink)
 $theme-colors:                      map-merge($theme-colors, $custom-colors)
 $theme-colors-rgb:                  map-loop($theme-colors, to-rgb, "$value")
 $utilities-colors:                  map-merge($utilities-colors, $custom-colors)
