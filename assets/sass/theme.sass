@@ -349,6 +349,45 @@ header
                 &-active
                     background-color: $secondary
 
+#nas-proces
+    @include gradient-y($green-gradient-top, $green-gradient-bottom)
+    height: 3000px
+
+    .step
+        padding-top: 20px
+
+        &:before
+            content: ""
+            position: absolute
+            left: 50%
+            top: 0
+            transform: translateX(-50%)
+            border-top: 20px solid $primary
+            border-left: 10px solid transparent
+            border-right: 10px solid transparent
+
+        .number
+            width: 60px
+            height: 60px
+            margin-top: 47px
+            margin-bottom: 47px
+
+            &:before, &:after
+                content: ""
+                width: 3px
+                height: 100%
+                background: $primary
+                position: absolute
+                left: 50%
+
+            &:before
+                top: 0
+                transform: translateY(-100%) translateX(-50%)
+
+            &:after
+                bottom: 0
+                transform: translateY(100%) translateX(-50%)
+
 //#cenik
     .room
         .row

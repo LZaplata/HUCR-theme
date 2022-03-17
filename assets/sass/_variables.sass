@@ -25,6 +25,8 @@ $green:                             #61ddd1
 $green-light:                       #9ae8df
 $white:                             #ffffff
 $blue-dark:                         #223854
+$green-gradient-top:                #24c2b8
+$green-gradient-bottom:             #229d99
 
 $font-family-base:                  $font-family-argentum
 $font-weight-base:                  $font-weight-light
@@ -102,7 +104,7 @@ $utilities-bg-colors:               map-loop($utilities-colors, rgba-css-var, "$
 
 /***** add new utilities *****/
 
-$utilities:                         map-merge($utilities, ("font-weight": map-merge(map-get($utilities, "font-weight"), (values: map-merge(map-get(map-get($utilities, "font-weight"), "values"), ("normal": $font-weight-normal, "extra-bold": $font-weight-extra-bold))))))
+$utilities:                         map-merge($utilities, ("font-weight": map-merge(map-get($utilities, "font-weight"), (values: map-merge(map-get(map-get($utilities, "font-weight"), "values"), ("normal": $font-weight-normal, "medium": $font-weight-medium, "extra-bold": $font-weight-extra-bold))))))
 $utilities:                         map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"), (values: map-merge(map-get(map-get($utilities, "font-size"), "values"), (16: $font-size-16, 20: $font-size-20, 24: $font-size-24, 58: $font-size-58, 81: $font-size-81))))))
 $utilities:                         map-merge($utilities, ("font-family": (property: font-family, class: ff, values: ("base": $font-family-base, "argentum": $font-family-argentum, "archivo": $font-family-archivo, "mohave": $font-family-mohave))))
 $utilities:                         map-merge($utilities, ("color-hover": (property: color, class: text, values: ("secondary": $secondary), state: hover)))
