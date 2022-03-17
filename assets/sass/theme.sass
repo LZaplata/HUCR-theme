@@ -351,42 +351,77 @@ header
 
 #nas-proces
     @include gradient-y($green-gradient-top, $green-gradient-bottom)
-    height: 3000px
 
     .step
-        padding-top: 20px
+        margin-bottom: 65px
 
-        &:before
+        &:after
             content: ""
+            background-image: url("../images/process/line.svg")
+            width: 20px
             position: absolute
             left: 50%
-            top: 0
-            transform: translateX(-50%)
-            border-top: 20px solid $primary
-            border-left: 10px solid transparent
-            border-right: 10px solid transparent
+            bottom: 0
+            transform: translateY(100%) translateX(-50%)
+            background-position-y: top
+            height: 65px
+
+        @include media-breakpoint-up(md)
+            margin-bottom: 0
+            height: 227px
+
+            &:after
+                height: 0
+
+        @include media-breakpoint-up(lg)
+            height: 237px
+
+        @include media-breakpoint-up(xl)
+            height: 242px
 
         .number
             width: 60px
             height: 60px
-            margin-top: 47px
-            margin-bottom: 47px
+            margin-bottom: 62px
+            margin-top: 82px
+
+            @include media-breakpoint-up(sm)
+                width: 65px
+                height: 65px
+
+            @include media-breakpoint-up(md)
+                width: 75px
+                height: 75px
+
+            @include media-breakpoint-up(lg)
+                width: 85px
+                height: 85px
+
+            @include media-breakpoint-up(xl)
+                width: 90px
+                height: 90px
 
             &:before, &:after
                 content: ""
-                width: 3px
-                height: 100%
-                background: $primary
+                background-image: url("../images/process/line.svg")
+                width: 20px
                 position: absolute
                 left: 50%
+                background-position-y: bottom
 
             &:before
                 top: 0
                 transform: translateY(-100%) translateX(-50%)
+                height: 85px
 
             &:after
                 bottom: 0
                 transform: translateY(100%) translateX(-50%)
+                height: 73px
+
+        .img
+            img
+                width: 100px
 
 //#cenik
     .room
