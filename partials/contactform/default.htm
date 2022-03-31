@@ -34,36 +34,6 @@
             </div>
         </div>
 
-        <div class="col-sm-6">
-            <div class="input-group">
-                <span class="input-group-text">
-                    <i class="bi bi-calendar-check"></i>
-                </span>
-
-                <input
-                    type="text"
-                    id="arrival"
-                    name="arrival"
-                    class="form-control"
-                    placeholder="Datum příjezdu">
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="input-group">
-                <span class="input-group-text">
-                    <i class="bi bi-calendar-x"></i>
-                </span>
-
-                <input
-                    type="text"
-                    id="departure"
-                    name="departure"
-                    class="form-control"
-                    placeholder="Datum odjezdu">
-            </div>
-        </div>
-
         <div class="col-12">
             <div class="input-group">
                 <span class="input-group-text align-items-start">
@@ -74,17 +44,17 @@
             </div>
         </div>
 
-        <div class="col-12 fs-15">
+        <div class="col-12 fs-16">
             Odesláním formuláře souhlasím se
 
-            <a href="{{ "gdpr"|page }}" class="link-blue text-orange-hover transition-base text-decoration-none">
+            <a href="{{ "gdpr"|page }}" class="link-secondary text-white-hover transition-base text-decoration-none">
                 zpracováním osobních údajů
             </a>.
         </div>
 
         <div class="col-12">
-            <button id="button" type="submit" class="btn btn-blue">
-                Odeslat <i class="bi bi-chevron-right fs-15"></i>
+            <button id="button" type="submit" class="btn btn-outline-secondary btn-lg text-uppercase with-arrow">
+                Odeslat <span class="arrow right"></span>
             </button>
         </div>
 

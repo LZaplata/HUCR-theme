@@ -9,6 +9,7 @@ $font-family-mohave:                "Mohave", sans-serif
 $font-size-16:                      1rem
 $font-size-20:                      1.25rem
 $font-size-24:                      1.5rem
+$font-size-30:                      1.875rem
 $font-size-58:                      3.625rem
 $font-size-81:                      5.0625rem
 $font-size-base:                    $font-size-20
@@ -16,6 +17,7 @@ $font-size-base:                    $font-size-20
 $font-weight-light:                 300
 $font-weight-normal:                400
 $font-weight-medium:                500
+$font-weight-bold:                  700
 $font-weight-extra-bold:            800
 
 $primary:                           #26263a
@@ -27,6 +29,7 @@ $white:                             #ffffff
 $blue-dark:                         #223854
 $green-gradient-top:                #24c2b8
 $green-gradient-bottom:             #229d99
+$blue-gradient-top:                 #285864
 
 $font-family-base:                  $font-family-argentum
 $font-weight-base:                  $font-weight-light
@@ -44,8 +47,8 @@ $link-decoration:                   none
 
 $nav-link-font-size:                $font-size-16
 $nav-link-font-weight:              $font-weight-extra-bold
-$nav-link-color:                    $white
-$nav-link-hover-color:              $white
+$nav-link-color:                    transparent
+$nav-link-hover-color:              transparent
 $nav-link-padding-x:                0
 $nav-link-padding-y:                0
 
@@ -75,18 +78,17 @@ $line-height-sm:                    1.2
 //$card-color:                        $primary
 //$card-spacer-x:                     1.5rem
 //$card-spacer-y:                     1rem
-//
-//$input-placeholder-color:           $primary
-//$input-font-size:                   $font-size-15
-//$input-font-weight:                 $font-weight-normal
-//$input-border-color:                $white
-//$input-border-radius:               2rem
-//$input-padding-x:                   1.3rem
-//$input-padding-y:                   .6rem
-//$input-focus-border-color:          $white
-//$input-focus-box-shadow:            none
-//$input-group-addon-bg:              $white
-//$input-group-addon-color:           $primary
+
+$input-font-size:                   $font-size-16
+$input-font-weight:                 $font-weight-normal
+$input-border-color:                $white
+$input-border-radius:               2rem
+$input-padding-x:                   1.3rem
+$input-padding-y:                   .6rem
+$input-focus-border-color:          $white
+$input-focus-box-shadow:            none
+$input-group-addon-bg:              $white
+$input-group-addon-color:           $primary
 
 @import "bootstrap/scss/functions"
 @import "bootstrap/scss/variables"
@@ -104,10 +106,10 @@ $utilities-bg-colors:               map-loop($utilities-colors, rgba-css-var, "$
 
 /***** add new utilities *****/
 
-$utilities:                         map-merge($utilities, ("font-weight": map-merge(map-get($utilities, "font-weight"), (values: map-merge(map-get(map-get($utilities, "font-weight"), "values"), ("normal": $font-weight-normal, "medium": $font-weight-medium, "extra-bold": $font-weight-extra-bold))))))
-$utilities:                         map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"), (values: map-merge(map-get(map-get($utilities, "font-size"), "values"), (16: $font-size-16, 20: $font-size-20, 24: $font-size-24, 58: $font-size-58, 81: $font-size-81))))))
+$utilities:                         map-merge($utilities, ("font-weight": map-merge(map-get($utilities, "font-weight"), (values: map-merge(map-get(map-get($utilities, "font-weight"), "values"), ("normal": $font-weight-normal, "medium": $font-weight-medium, "bold": $font-weight-bold, "extra-bold": $font-weight-extra-bold))))))
+$utilities:                         map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"), (values: map-merge(map-get(map-get($utilities, "font-size"), "values"), (16: $font-size-16, 20: $font-size-20, 24: $font-size-24, 30: $font-size-30, 58: $font-size-58, 81: $font-size-81))))))
 $utilities:                         map-merge($utilities, ("font-family": (property: font-family, class: ff, values: ("base": $font-family-base, "argentum": $font-family-argentum, "archivo": $font-family-archivo, "mohave": $font-family-mohave))))
-$utilities:                         map-merge($utilities, ("color-hover": (property: color, class: text, values: ("secondary": $secondary), state: hover)))
+$utilities:                         map-merge($utilities, ("color-hover": (property: color, class: text, values: ("primary": $primary, "secondary": $secondary, "white": $white), state: hover)))
 ////$utilities:                         map-merge($utilities, ("border-hover": (property: border-color, class: border, values: ("secondary": $secondary), state: hover)))
 //$utilities:                         map-merge($utilities, ("bg-hover": (property: background-color, class: bg, values: ("secondary": $secondary), state: hover)))
 $utilities:                         map-merge($utilities, ("transition": (property: transition, class: transition, values: ("base": $transition-base))))

@@ -1,41 +1,120 @@
-<div id="kontakt" class="container-fluid bg-secondary py-5">
-    <div id="contact-container" class="container-lg">
+<div class="container-fluid py-5 text-white" id="kontakt">
+    <div class="container-lg py-xl-5">
         <div class="row">
-            <div class="col-lg-7 col-xl-6">
-                <h2 class="mb-4">Rezervace</h2>
+            <div class="col-12 col-xl-6">
+                <div class="me-xl-5">
+                    <p class="h2 mb-4 text-uppercase text-white fst-italic">
+                        Kontaktujte nás
+                    </p>
 
-                {% component "contactform" %}
+                    {% component "contactform" %}
+                </div>
             </div>
 
-            <div class="col-lg-5 col-xl-4 offset-xl-2 mt-5 mt-lg-3">
-                <p class="mb-4 fs-20 address">
-                    <img src="{{ 'assets/images/logo-contact.svg'|theme }}" alt="logo" class="img-fluid mb-2"><br>
+            <div class="col-12 mt-5 col-xl-6 mt-xl-0">
+                <div class="ms-xl-5">
+                    <p class="fw-bold fs-30 lh-sm mb-4">
+                        HUMLNET <br>
+                        CREATIVE s.r.o.
+                    </p>
 
-                    Lisabonská 799/8 <br>
-                    190 00 Praha 9
-                </p>
+                    <p class="mb-4">
+                        Žižkova 498 <br>
+                        541 01 Trutnov <br>
+                        1. patro (nad prodejnou CZC)
+                    </p>
 
-                <p class="mb-5 fs-20">
-                    <span class="d-flex align-items-center">
-                        <i class="bi bi-telephone fs-25 me-3 text-brown-light"></i>
+                    <p class="mb-2">
+                        IČ: 27498140 <br>
+                        DIČ: CZ27498140
+                    </p>
 
-                        <a href="tel:+420 777 123 456" class="link-primary text-decoration-none text-orange-hover transition-base">
-                            +420 777 123 456
-                        </a>
-                    </span>
+                    <p class="mb-0 fs-16">
+                        Spisová značka 22571 C, Krajský soud v Hradci Králové
+                    </p>
 
-                    <span class="d-flex align-items-center">
-                        <i class="bi bi-envelope fs-25 me-3 text-brown-light"></i>
+                    <div class="mt-5 bg-secondary text-white p-4">
+                        <div>
+                            <p class="mb-0 bg-white">
 
-                        <a href="mailto:rezervace@villa-belvedere.cz" class="link-primary text-decoration-none text-orange-hover transition-base">
-                            rezervace@villa-belvedere.cz
-                        </a>
-                    </span>
-                </p>
+                            </p>
+                        </div>
 
-                <div class="ratio ratio-4x3">
-                    <iframe style="border:none" src="https://en.frame.mapy.cz/s/jocepafobe" width="400" height="280" frameborder="0"></iframe>
+                        <div>
+                            <p class="ff-archivo text-primary fs-20 text-uppercase mb-0">
+                                Jednatel
+                            </p>
+
+                            <p class="fs-30 fw-bold mb-2">
+                                Lukáš Záplata
+                            </p>
+
+                            <p class="d-flex align-items-center mb-0">
+                                <i class="bi bi-telephone text-primary me-3 fs-24"></i>
+
+                                <a href="tel:+420 775 652 656" class="link-white text-primary-hover transition-base">
+                                    +420 775 652 656
+                                </a>
+                            </p>
+
+                            <p class="d-flex align-items-center mb-0">
+                                <i class="bi bi-envelope text-primary me-3 fs-24"></i>
+
+                                <a href="maito:info@hucr.cz" class="link-white text-primary-hover transition-base">
+                                    info@hucr.cz
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-5">
+            <p class="text-center h3 text-white mb-4">
+                Kde nás najdete?
+            </p>
+
+            <div class="ratio ratio-21x9">
+                <iframe style="border:none" src="https://en.frame.mapy.cz/s/kepujataca" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="mt-5 py-5 border-bottom border-3 border-secondary d-flex justify-content-between align-items-center">
+            <div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="{{ 'gdpr'|page }}" class="nav-link text-uppercase">
+                            gdpr
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-uppercase">
+                            cookies
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="socials lh-1">
+                <a href="https://www.facebook.com/humlnetcreative" target="_blank" class="facebook bg-white d-inline-flex"></a>
+            </div>
+        </div>
+
+        <div class="mt-5 copyright row row-cols-xl-3">
+            <div class="col">
+                <a href="{{ 'homepage'|page }}/#kontakt" class="btn btn-outline-secondary text-uppercase">
+                    poptat web
+                </a>
+            </div>
+
+            <div class="col logo d-flex align-items-center justify-content-center">
+                <a href="{{ 'homepage'|page }}" class="d-block bg-white"></a>
+            </div>
+
+            <div class="cold fs-16 d-flex align-items-center justify-content-end">
+                2006 - {{ "now"|date("Y") }} @ HUMLNET CREATIVE s.r.o.
             </div>
         </div>
     </div>
