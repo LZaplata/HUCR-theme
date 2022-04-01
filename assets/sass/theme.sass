@@ -356,24 +356,18 @@ header
     @include gradient-y($green-gradient-top, $green-gradient-bottom)
 
     .step
-        margin-bottom: 65px
-
-        &:after
-            content: ""
-            background-image: url("../images/process/line.svg")
-            width: 20px
-            position: absolute
-            left: 50%
-            bottom: 0
-            transform: translateY(100%) translateX(-50%)
-            background-position-y: top
-            height: 65px
-
         @include media-breakpoint-up(md)
-            margin-bottom: 0
             height: 227px
 
             &:after
+                content: ""
+                background-image: url("../images/process/line.svg")
+                width: 20px
+                position: absolute
+                left: 50%
+                bottom: 0
+                transform: translateY(100%) translateX(-50%)
+                background-position-y: top
                 height: 0
 
         @include media-breakpoint-up(lg)
@@ -385,8 +379,6 @@ header
         .number
             width: 60px
             height: 60px
-            margin-bottom: 62px
-            margin-top: 82px
 
             @include media-breakpoint-up(sm)
                 width: 65px
@@ -395,6 +387,26 @@ header
             @include media-breakpoint-up(md)
                 width: 75px
                 height: 75px
+                margin-bottom: 62px
+                margin-top: 82px
+
+                &:before, &:after
+                    content: ""
+                    background-image: url("../images/process/line.svg")
+                    width: 20px
+                    position: absolute
+                    left: 50%
+                    background-position-y: bottom
+
+                &:before
+                    top: 0
+                    transform: translateY(-100%) translateX(-50%)
+                    height: 85px
+
+                &:after
+                    bottom: 0
+                    transform: translateY(100%) translateX(-50%)
+                    height: 73px
 
             @include media-breakpoint-up(lg)
                 width: 85px
@@ -403,24 +415,6 @@ header
             @include media-breakpoint-up(xl)
                 width: 90px
                 height: 90px
-
-            &:before, &:after
-                content: ""
-                background-image: url("../images/process/line.svg")
-                width: 20px
-                position: absolute
-                left: 50%
-                background-position-y: bottom
-
-            &:before
-                top: 0
-                transform: translateY(-100%) translateX(-50%)
-                height: 85px
-
-            &:after
-                bottom: 0
-                transform: translateY(100%) translateX(-50%)
-                height: 73px
 
         .img
             img
