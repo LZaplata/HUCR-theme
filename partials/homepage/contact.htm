@@ -33,23 +33,23 @@
                         Spisová značka 22571 C, Krajský soud v Hradci Králové
                     </p>
 
-                    <div class="mt-5 bg-secondary text-white p-4">
-                        <div>
-                            <p class="mb-0 bg-white">
-
+                    <div class="mt-5 bg-secondary text-white p-4 d-flex flex-column flex-sm-row align-items-sm-center d-md-inline-flex w-auto d-xl-flex">
+                        <div class="text-center text-sm-start me-sm-4">
+                            <p class="mb-0 rounded-circle border border-3 border-primary d-inline-flex">
+                                <img src="{{ 'assets/images/zaplata.png'|theme }}" alt="Jednatel" class="img-fluid">
                             </p>
                         </div>
 
-                        <div>
-                            <p class="ff-archivo text-primary fs-20 text-uppercase mb-0">
+                        <div class="mt-3 mt-sm-0">
+                            <p class="ff-archivo text-primary fs-20 text-uppercase mb-0 text-center text-sm-start">
                                 Jednatel
                             </p>
 
-                            <p class="fs-30 fw-bold mb-2">
+                            <p class="fs-30 fw-bold mb-2 text-center text-sm-start">
                                 Lukáš Záplata
                             </p>
 
-                            <p class="d-flex align-items-center mb-0">
+                            <p class="d-flex align-items-center mb-0 justify-content-center justify-content-sm-start">
                                 <i class="bi bi-telephone text-primary me-3 fs-24"></i>
 
                                 <a href="tel:+420 775 652 656" class="link-white text-primary-hover transition-base">
@@ -57,7 +57,7 @@
                                 </a>
                             </p>
 
-                            <p class="d-flex align-items-center mb-0">
+                            <p class="d-flex align-items-center mb-0 justify-content-center justify-content-sm-start">
                                 <i class="bi bi-envelope text-primary me-3 fs-24"></i>
 
                                 <a href="maito:info@hucr.cz" class="link-white text-primary-hover transition-base">
@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="mt-5 pt-5">
+        <div class="mt-5 pt-md-4">
             <p class="text-center h3 text-white mb-4">
                 Kde nás najdete?
             </p>
@@ -102,19 +102,19 @@
             </div>
         </div>
 
-        <div class="mt-5 copyright row row-cols-xl-3">
-            <div class="col">
+        <div class="mt-5 copyright row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col text-center text-sm-start">
                 <a href="{{ 'homepage'|page }}/#kontakt" class="btn btn-outline-secondary text-uppercase">
                     poptat web
                 </a>
             </div>
 
-            <div class="col logo d-flex align-items-center justify-content-center">
+            <div class="col logo d-flex align-items-center justify-content-center mt-5 mt-sm-0 justify-content-sm-end justify-content-md-center mt-md-0">
                 <a href="{{ 'homepage'|page }}" class="d-block bg-white"></a>
             </div>
 
-            <div class="cold fs-16 d-flex align-items-center justify-content-end">
-                2006 - {{ "now"|date("Y") }} @ HUMLNET CREATIVE s.r.o.
+            <div class="col fs-16 d-flex align-items-center justify-content-center mt-5 col-sm-12 col-lg mt-md-0 justify-content-md-end text-md-end">
+                2006 - {{ "now"|date("Y") }} &copy;<br class="d-none d-md-inline-block d-xl-none"> HUMLNET CREATIVE s.r.o.
             </div>
         </div>
     </div>

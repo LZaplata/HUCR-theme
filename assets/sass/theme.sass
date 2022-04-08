@@ -450,6 +450,8 @@ header
                     margin-left: 60px
 
             a
+                color: $white
+
                 @media (any-hover: hover)
                     &:not(.contact)
                         background-image: url("../images/text-white-secondary.svg")
@@ -457,6 +459,7 @@ header
                         background-position: right 4%
                         -webkit-background-clip: text
                         transition: background-position .5s ease
+                        color: transparent
 
                         &:hover
                             background-position: right 28%
@@ -507,34 +510,10 @@ header
                 a
                     text-align: center
                     font-size: $font-size-24 !important
+                    color: $white
 
                     &:not(.contact)
                         padding: map-get($spacers, 3) 0
-
-                        @media (any-hover: hover)
-                            &:before
-                                content: attr(data-hover)
-                                position: absolute
-                                top: map-get($spacers, 3)
-                                left: 0
-                                overflow: hidden
-                                padding-bottom: 7px
-                                max-width: 0
-                                border-bottom: 3px solid $secondary
-                                color: $secondary
-                                transition: .5s max-width ease
-                                white-space: nowrap
-
-                            &:hover
-                                &:before
-                                    max-width: 100%
-
-                    @media (any-hover: hover)
-                        &.contact
-                            background-position: right -45% !important
-
-                            &:hover
-                                background-position: right 30% !important
 
         .socials
             a
@@ -544,12 +523,3 @@ header
                 -webkit-mask: url("../images/icons/facebook.svg")
                 mask-size: cover
                 -webkit-mask-size: cover
-
-                @media (any-hover: hover)
-                    background-image: url("../images/btn-secondary-bg.svg")
-                    background-repeat: no-repeat
-                    background-position: right -25%
-                    transition: background-position .5s ease
-
-                    &:hover
-                        background-position: right 8%
