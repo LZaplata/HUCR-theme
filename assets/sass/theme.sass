@@ -377,36 +377,28 @@ header
             height: 242px
 
         .number
-            width: 60px
-            height: 60px
+            width: 75px
+            height: 75px
+            margin-bottom: 62px
+            margin-top: 82px
 
-            @include media-breakpoint-up(sm)
-                width: 65px
-                height: 65px
+            &:before, &:after
+                content: ""
+                background-image: url("../images/process/line.svg")
+                width: 20px
+                position: absolute
+                left: 50%
+                background-position-y: bottom
 
-            @include media-breakpoint-up(md)
-                width: 75px
-                height: 75px
-                margin-bottom: 62px
-                margin-top: 82px
+            &:before
+                top: 0
+                transform: translateY(-100%) translateX(-50%)
+                height: 85px
 
-                &:before, &:after
-                    content: ""
-                    background-image: url("../images/process/line.svg")
-                    width: 20px
-                    position: absolute
-                    left: 50%
-                    background-position-y: bottom
-
-                &:before
-                    top: 0
-                    transform: translateY(-100%) translateX(-50%)
-                    height: 85px
-
-                &:after
-                    bottom: 0
-                    transform: translateY(100%) translateX(-50%)
-                    height: 73px
+            &:after
+                bottom: 0
+                transform: translateY(100%) translateX(-50%)
+                height: 73px
 
             @include media-breakpoint-up(lg)
                 width: 85px
@@ -419,6 +411,9 @@ header
         .img
             img
                 width: 152px
+
+        //.text
+            font-size: $font-size-16
 
     .end
         @include media-breakpoint-up(md)
