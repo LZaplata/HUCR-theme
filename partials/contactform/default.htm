@@ -63,33 +63,3 @@
         </div>
     </div>
 </form>
-
-{% put scripts %}
-    <script>
-        const arrivalDatePicker = MCDatepicker.create({
-            el: "#arrival",
-            bodyType: "inline",
-            dateFormat: "d.m.yyyy",
-            autoClose: true,
-            closeOnBlur: true,
-            firstWeekday: 1,
-            customWeekDays: ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota"],
-            customMonths: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"],
-            customClearBTN: 'Smazat',
-            customCancelBTN: 'Zrušit',
-        });
-
-        const departureDatePicker = MCDatepicker.create({
-            el: "#departure",
-            bodyType: "inline",
-            dateFormat: "d.m.yyyy",
-            autoClose: true,
-            closeOnBlur: true,
-            firstWeekday: 1,
-            customWeekDays: ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota"],
-            customMonths: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"],
-            customClearBTN: 'Smazat',
-            customCancelBTN: 'Zrušit',
-        });
-    </script>
-{% endput %}
