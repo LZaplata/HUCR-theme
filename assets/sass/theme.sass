@@ -406,13 +406,62 @@ header
 #kontakt
     @include gradient-y($blue-gradient-top, $primary)
 
-    form
-        .input-group
-            .input-group-text
-                padding-right: 0
+    #scf-contactform
+        form
+            &.was-validated
+                .form-group
+                    &:before
+                        top: 14px
 
-            .form-control
-                padding-left: .5rem
+            .form-group
+                position: relative
+
+                &.has-error
+                    display: flex
+                    flex-direction: column
+
+                    input
+                        order: 0
+
+                    small
+                        order: 10
+                        display: block
+                        font-size: $font-size-16
+
+                input, textarea
+                    padding-left: $input-padding-x * 2.2
+
+                &:before
+                    font-family: bootstrap-icons
+                    position: absolute
+                    font-size: $font-size-16
+                    top: 15px
+                    left: $input-padding-x + ($grid-gutter-width / 2)
+                    line-height: 1
+                    color: $input-placeholder-color
+
+                &.name
+                    &:before
+                        content: "\F4E1"
+
+                &.email
+                    &:before
+                        content: "\F32F"
+
+                &.phone
+                    &:before
+                        content: "\F5C1"
+
+                &.text
+                    &:before
+                        content: "\F4CB"
+
+            button
+                &:after
+                    animation: none
+                    border: none
+                    opacity: 1
+                    height: auto
 
     .nav
         li

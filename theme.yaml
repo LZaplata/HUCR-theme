@@ -7,5 +7,5 @@ code: hucr
 parent: ''
 database: '0'
 require:
-    - martin.forms
     - rainlab.blog
+    - janvince.smallcontactform

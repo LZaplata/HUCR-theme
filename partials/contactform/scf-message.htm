@@ -1,0 +1,33 @@
+
+{% if formSentAlias == __SELF__.alias %}
+
+	{% if formSuccess %}
+
+{#		{{ __SELF__.getGaSuccessEventHtmlCode(true)|raw }}#}
+
+{#		{% flash success %}#}
+
+{#            <p class="h1 mb-4 text-white">#}
+{#                {{ html_entity_decode(message)|nl2br }}#}
+{#            </p>#}
+
+{#            <p class="mb-0 text-white">#}
+{#                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam ante. Praesent id justo in#}
+{#                neque elementum ultrices.#}
+{#            </p>#}
+
+{#		{% endflash %}#}
+
+	{% elseif formError %}
+
+{#		{% flash error %}#}
+
+{#			<div class="alert alert-{{ type == 'error' ? 'danger' : type }}">#}
+{#				{{ html_entity_decode(message)|nl2br }}#}
+{#			</div>#}
+
+{#		{% endflash %}#}
+
+	{% endif %}
+
+{% endif %}
