@@ -4,29 +4,11 @@ title = "Tvorba webových stránek"
 meta_title = "Tvorba webových stránek"
 meta_description = "Tvoříme moderní a profesionální webové stránky na míru."
 
-[genericForm contactform]
-rules[name] = "required"
-rules[email] = "required|email"
-rules_messages[name.required] = "Jméno je povinné"
-rules_messages[email.required] = "E-mail je povinný"
-rules_messages[email.email] = "Nesprávný formát e-mailu"
-messages_success = "Formulář byla úspěšně odeslána."
-messages_errors = "Při odesílání formuláře nastaly chyby."
-mail_enabled = 1
-mail_recipients[] = "zap@hucr.cz"
-mail_replyto = "email"
-reset_form = 1
-inline_errors = "disabled"
-sanitize_data = "disabled"
-anonymize_ip = "disabled"
-recaptcha_theme = "light"
-recaptcha_type = "image"
-recaptcha_size = "normal"
-emails_date_format = "Y-m-d"
+[contactForm contactform]
 ==
 {% partial "homepage/claim" %}
 {% partial "homepage/references" %}
 {% partial "homepage/about-us" %}
 {% partial "homepage/process" %}
 {% partial "homepage/partners" %}
-{#{% partial "homepage/contact" %}#}
+{% partial "homepage/contact" %}
