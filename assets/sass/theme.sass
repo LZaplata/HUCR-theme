@@ -226,7 +226,11 @@ header
     //    margin-top: 270px
 
     .text
-        top: 30%
+        @include media-breakpoint-up(xl)
+            top: 25%
+
+        @include media-breakpoint-up(xxl)
+            top: 30%
 
         .first-line
             @include rfs($font-size-81 * $line-height-sm, height)
