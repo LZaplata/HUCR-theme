@@ -226,14 +226,18 @@ header
     //    margin-top: 270px
 
     .text
-        @include media-breakpoint-up(xl)
-            top: 25%
+        @include media-breakpoint-only(xl)
+            top: 27%
 
         @include media-breakpoint-up(xxl)
             top: 30%
 
         .first-line
             @include rfs($font-size-81 * $line-height-sm, height)
+
+            @include media-breakpoint-only(xl)
+                font-size: $font-size-75 !important
+                @include rfs($font-size-75 * $line-height-sm, height)
 
             .words
                 margin-top: -2px
@@ -245,6 +249,10 @@ header
                 span
                     padding-top: 2px
                     border-spacing: 0
+
+        .second-line
+            @include media-breakpoint-only(xl)
+                font-size: $font-size-75 !important
 
         .works
             a
