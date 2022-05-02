@@ -240,11 +240,11 @@ header
 
             @include media-breakpoint-only(lg)
                 font-size: $font-size-65 !important
-                @include rfs($font-size-65 * $line-height-sm, height)
+                height: $font-size-65 * $line-height-sm
 
             @include media-breakpoint-only(xl)
                 font-size: $font-size-75 !important
-                @include rfs($font-size-75 * $line-height-sm, height)
+                height: $font-size-75 * $line-height-sm
 
             .words
                 margin-top: -2px
@@ -260,7 +260,6 @@ header
         .second-line
             @include media-breakpoint-only(lg)
                 font-size: $font-size-65 !important
-                @include rfs($font-size-65 * $line-height-sm, height)
 
             @include media-breakpoint-only(xl)
                 font-size: $font-size-75 !important
