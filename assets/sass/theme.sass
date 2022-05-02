@@ -225,53 +225,56 @@ header
     //@include media-breakpoint-up(xxl)
     //    margin-top: 270px
 
-    .first-line
-        @include rfs($font-size-81 * $line-height-sm, height)
+    .text
+        top: 30%
 
-        .words
-            margin-top: -2px
-            margin-left: 0
+        .first-line
+            @include rfs($font-size-81 * $line-height-sm, height)
 
-            @include media-breakpoint-up(md)
-                margin-left: 15px
+            .words
+                margin-top: -2px
+                margin-left: 0
 
-            span
-                padding-top: 2px
-                border-spacing: 0
+                @include media-breakpoint-up(md)
+                    margin-left: 15px
 
-    .works
-        a
-            &:before, &:after
-                content: ""
-                left: 50%
-                position: absolute
-                mask: url("../images/icons/chevron-down.svg")
-                -webkit-mask: url("../images/icons/chevron-down.svg")
-                mask-size: cover
-                -webkit-mask-size: cover
-                background-color: $secondary
-                width: 30px
-                height: 30px
-                transform: translateX(-50%)
-                transition: bottom .5s ease
+                span
+                    padding-top: 2px
+                    border-spacing: 0
 
-                @include media-breakpoint-up(lg)
-                    width: 40px
+        .works
+            a
+                &:before, &:after
+                    content: ""
+                    left: 50%
+                    position: absolute
+                    mask: url("../images/icons/chevron-down.svg")
+                    -webkit-mask: url("../images/icons/chevron-down.svg")
+                    mask-size: cover
+                    -webkit-mask-size: cover
+                    background-color: $secondary
+                    width: 30px
                     height: 30px
+                    transform: translateX(-50%)
+                    transition: bottom .5s ease
 
-            &:before
-                bottom: -40px
+                    @include media-breakpoint-up(lg)
+                        width: 40px
+                        height: 30px
 
-            &:after
-                bottom: -55px
+                &:before
+                    bottom: -40px
 
-            @media (any-hover: hover)
-                &:hover
-                    &:before
-                        bottom: -45px
+                &:after
+                    bottom: -55px
 
-                    &:after
-                        bottom: -63px
+                @media (any-hover: hover)
+                    &:hover
+                        &:before
+                            bottom: -45px
+
+                        &:after
+                            bottom: -63px
 
 #reference
     //margin-top: 155px
