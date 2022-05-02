@@ -226,6 +226,9 @@ header
     //    margin-top: 270px
 
     .text
+        @include media-breakpoint-only(md)
+            top: 25%
+
         @include media-breakpoint-only(lg)
             top: 26%
 
@@ -237,6 +240,10 @@ header
 
         .first-line
             @include rfs($font-size-81 * $line-height-sm, height)
+
+            @include media-breakpoint-only(md)
+                font-size: $font-size-58 !important
+                height: $font-size-58 * $line-height-sm
 
             @include media-breakpoint-only(lg)
                 font-size: $font-size-65 !important
@@ -258,6 +265,9 @@ header
                     border-spacing: 0
 
         .second-line
+            @include media-breakpoint-only(md)
+                font-size: $font-size-58 !important
+
             @include media-breakpoint-only(lg)
                 font-size: $font-size-65 !important
 
