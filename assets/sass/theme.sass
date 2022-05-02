@@ -247,6 +247,10 @@ header
         .first-line
             @include rfs($font-size-81 * $line-height-sm, height)
 
+            @include media-breakpoint-only(xs)
+                font-size: $font-size-43 !important
+                height: $font-size-43 * $line-height-sm
+
             @include media-breakpoint-only(sm)
                 font-size: $font-size-50 !important
                 height: $font-size-50 * $line-height-sm
@@ -275,6 +279,9 @@ header
                     border-spacing: 0
 
         .second-line
+            @include media-breakpoint-only(xs)
+                font-size: $font-size-43 !important
+
             @include media-breakpoint-only(sm)
                 font-size: $font-size-50 !important
 
