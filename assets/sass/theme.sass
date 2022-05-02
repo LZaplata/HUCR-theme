@@ -226,7 +226,10 @@ header
     //    margin-top: 270px
 
     .text
-        @include media-breakpoint-down(lg)
+        @include media-breakpoint-only(sm)
+            top: 29%
+
+        @include media-breakpoint-only(md)
             top: 25%
 
         @include media-breakpoint-only(lg)
