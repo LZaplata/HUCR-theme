@@ -1,5 +1,15 @@
-<div class="container-fluid" id="claim">
-    <div class="container-lg">
+<div class="container-fluid px-0 position-relative d-flex justify-content-center overflow-hidden" id="claim">
+    <picture>
+        <source srcset="{{ 'assets/images/banner/xs.png'|theme }}" media="(max-width: 575px)">
+        <source srcset="{{ 'assets/images/banner/sm.png'|theme }}" media="(min-width: 576px) and (max-width: 767px)">
+        <source srcset="{{ 'assets/images/banner/md.png'|theme }}" media="(min-width: 768px) and (max-width: 991px)">
+        <source srcset="{{ 'assets/images/banner/lg.png'|theme }}" media="(min-width: 992px) and (max-width: 1199px)">
+        <source srcset="{{ 'assets/images/banner/xl.png'|theme }}" media="(min-width: 1120px) and (max-width: 1399px)">
+
+        <img src="{{ 'assets/images/banner/xxl.png'|theme }}" alt="banner">
+    </picture>
+
+    <div class="container-lg position-absolute top-50 start-50 translate-middle">
         <div class="d-flex justify-content-center d-md-none lh-sm second-line ff-mohave fs-81 text-white fst-italic text-uppercase">
             <p class="mb-0">
                 Tvoříme
