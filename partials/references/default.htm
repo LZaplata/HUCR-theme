@@ -20,7 +20,7 @@
                             </p>
 
                             <p class="mb-0">
-                                {{ post.content }}
+                                {{ post.content|striptags }}
                             </p>
 
                             {% if post.excerpt %}
