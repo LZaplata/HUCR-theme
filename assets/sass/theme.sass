@@ -75,6 +75,13 @@
                 &:before
                     background: $white
 
+    &.text-primary
+        span
+            &.arrow
+                &.right
+                    &:before
+                        background: $primary
+
 .btn-outline-white
     @include button-variant(transparent, $white, $primary, transparent, $white, $primary, transparent, $white, $primary)
 
@@ -94,40 +101,6 @@
 
 html
     scroll-behavior: smooth
-
-//body
-    background-image: url("../images/gradient.png")
-    background-position: top center
-    background-size: cover
-
-//.hero
-    background-image: url("../images/banner/layer01.png")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position-y: top
-    background-position-x: center
-    height: 1200px
-
-    @include media-breakpoint-up(sm)
-        height: 1300px
-
-    @include media-breakpoint-up(md)
-        background-image: url("../images/banner/layer02.png"), url("../images/banner/layer01.png")
-        background-size: 100%, cover
-        background-position-y: 260px, top
-
-    @include media-breakpoint-up(lg)
-        height: 1500px
-        background-size: 120%, cover
-        background-position-y: 195px, top
-
-    @include media-breakpoint-up(xl)
-        height: 1650px
-
-    @include media-breakpoint-up(xxl)
-        height: 1863px
-        background-size: cover
-        background-position-y: 50px, top
 
 header
     z-index: 10
