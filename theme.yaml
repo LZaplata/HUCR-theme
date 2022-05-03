@@ -9,3 +9,5 @@ database: '0'
 require:
     - rainlab.blog
     - janvince.smallcontactform
+    - lzaplata.extensions
+    - rainlab.translate
