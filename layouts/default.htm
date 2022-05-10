@@ -1,3 +1,5 @@
+[cookiesBar cookiesbar]
+==
 <!DOCTYPE html>
 <html class="h-100" lang="en">
     <head>
@@ -20,17 +22,15 @@
     </head>
 
     <body class="d-flex flex-column h-100">
-{#        <div class="hero position-absolute w-100"></div>#}
-
         {% partial "header" %}
 
         <main class="position-relative">
             {% page %}
         </main>
 
-{#        {% partial "footer" %}#}
-{#        {% partial "copyright" %}#}
         {% partial "offcanvas" %}
+
+        {% component "cookiesbar" %}
 
         <script src="{{ [
             'assets/js/jquery.min.js',

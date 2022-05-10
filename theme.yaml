@@ -9,4 +9,5 @@ database: '0'
 require:
     - rainlab.blog
     - janvince.smallcontactform
+    - janvince.smallgdpr
     - lzaplata.extensions

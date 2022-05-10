@@ -3,20 +3,15 @@
 
 	{% if formSuccess %}
 
-{#		{{ __SELF__.getGaSuccessEventHtmlCode(true)|raw }}#}
+		{{ __SELF__.getGaSuccessEventHtmlCode(true)|raw }}
 
-{#		{% flash success %}#}
+		{% flash success %}
 
-{#            <p class="h1 mb-4 text-white">#}
-{#                {{ html_entity_decode(message)|nl2br }}#}
-{#            </p>#}
+            <p class="text-white">
+                {{ html_entity_decode(message)|nl2br }}
+            </p>
 
-{#            <p class="mb-0 text-white">#}
-{#                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam ante. Praesent id justo in#}
-{#                neque elementum ultrices.#}
-{#            </p>#}
-
-{#		{% endflash %}#}
+		{% endflash %}
 
 	{% elseif formError %}
 

@@ -184,23 +184,6 @@ header
                     background-position: right 8%
 
 #claim
-    //margin-top: 153px
-    //
-    //@include media-breakpoint-up(sm)
-    //    margin-top: 160px
-    //
-    //@include media-breakpoint-up(md)
-    //    margin-top: 180px
-    //
-    //@include media-breakpoint-up(lg)
-    //    margin-top: 225px
-    //
-    //@include media-breakpoint-up(xl)
-    //    margin-top: 250px
-    //
-    //@include media-breakpoint-up(xxl)
-    //    margin-top: 270px
-
     .text
         @include media-breakpoint-only(xs)
             top: 32%
@@ -305,25 +288,6 @@ header
                             bottom: -63px
 
 #reference
-    //margin-top: 155px
-    //padding-top: $grid-gutter-width
-    //
-    //@include media-breakpoint-up(sm)
-    //    margin-top: 260px
-    //
-    //@include media-breakpoint-up(md)
-    //    padding-top: 50px
-    //    margin-top: 240px
-    //
-    //@include media-breakpoint-up(lg)
-    //    margin-top: 280px
-    //
-    //@include media-breakpoint-up(xl)
-    //    margin-top: 450px
-    //
-    //@include media-breakpoint-up(xxl)
-    //    margin-top: 550px
-
     .swiper
         .swiper-wrapper
             .swiper-slide
@@ -406,9 +370,6 @@ header
             img
                 width: 152px
 
-        //.text
-            font-size: $font-size-16
-
     .end
         @include media-breakpoint-up(md)
             padding-top: 40px
@@ -478,11 +439,15 @@ header
                         content: "\F4CB"
 
             button
+                @include media-breakpoint-down(md)
+                    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius)
+
                 &:after
                     animation: none
                     border: none
                     opacity: 1
                     height: auto
+                    display: none
 
     .nav
         li
@@ -545,6 +510,19 @@ header
 
                     &:hover
                         background-position: center 30%
+
+#partners
+    .partner
+        a
+            img
+                filter: grayscale(1)
+                transition: $transition-base
+
+            @media (any-hover: hover)
+                &:hover
+                    img
+                        filter: grayscale(0)
+
 
 #offcanvas
     .offcanvas-body
