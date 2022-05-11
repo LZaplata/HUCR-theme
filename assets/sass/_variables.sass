@@ -7,6 +7,7 @@ $font-family-archivo:               "Archivo Condensed", sans-serif
 $font-family-mohave:                "Mohave", sans-serif
 
 $font-size-16:                      1rem
+$font-size-18:                      1.125rem
 $font-size-20:                      1.25rem
 $font-size-24:                      1.5rem
 $font-size-30:                      1.875rem
@@ -73,6 +74,10 @@ $btn-font-size-lg:                  $font-size-24
 $btn-padding-y-lg:                  .9rem
 $btn-padding-x-lg:                  3.5rem
 $btn-border-radius-lg:              4rem
+$btn-font-size-sm:                  $font-size-18
+$btn-padding-y-sm:                  .4rem
+$btn-padding-x-sm:                  1.5rem
+$btn-border-radius-sm:              2rem
 
 $line-height-sm:                    1.2
 
@@ -93,6 +98,7 @@ $input-focus-border-color:          $white
 $input-focus-box-shadow:            none
 $input-group-addon-bg:              $white
 $input-group-addon-color:           $primary
+$form-check-input-focus-box-shadow: none
 
 @import "bootstrap/scss/functions"
 @import "bootstrap/scss/variables"
@@ -111,7 +117,7 @@ $utilities-bg-colors:               map-loop($utilities-colors, rgba-css-var, "$
 /***** add new utilities *****/
 
 $utilities:                         map-merge($utilities, ("font-weight": map-merge(map-get($utilities, "font-weight"), (values: map-merge(map-get(map-get($utilities, "font-weight"), "values"), ("normal": $font-weight-normal, "medium": $font-weight-medium, "bold": $font-weight-bold, "extra-bold": $font-weight-extra-bold))))))
-$utilities:                         map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"), (values: map-merge(map-get(map-get($utilities, "font-size"), "values"), (16: $font-size-16, 20: $font-size-20, 24: $font-size-24, 30: $font-size-30, 58: $font-size-58, 81: $font-size-81))))))
+$utilities:                         map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"), (values: map-merge(map-get(map-get($utilities, "font-size"), "values"), (16: $font-size-16, 18: $font-size-18, 20: $font-size-20, 24: $font-size-24, 30: $font-size-30, 58: $font-size-58, 81: $font-size-81))))))
 $utilities:                         map-merge($utilities, ("font-family": (property: font-family, class: ff, values: ("base": $font-family-base, "argentum": $font-family-argentum, "archivo": $font-family-archivo, "mohave": $font-family-mohave))))
 $utilities:                         map-merge($utilities, ("color-hover": (property: color, class: text, values: ("primary": $primary, "secondary": $secondary, "white": $white), state: hover)))
 ////$utilities:                         map-merge($utilities, ("border-hover": (property: border-color, class: border, values: ("secondary": $secondary), state: hover)))

@@ -1,0 +1,32 @@
+{% if cookiesSettingsGet('cookies', null)|length %}
+
+    <form class="list-cookies">
+
+        {% for cookie in cookiesSettingsGet('cookies') %}
+
+        <div class="form-check text-center ps-0">
+            <input class="form-check-input float-none ms-0 {{ cookie.required ? 'disabled' : ''  }}" type="checkbox"
+                   id="sg-cookies{{ sgCookiesLocalePrefix ? sgCookiesLocalePrefix }}-{{cookie.slug}}{{customId}}"
+                   {{ sgCookies[cookie.slug] or (cookie.required) ? 'checked' : '' }} {{ cookie.required ? 'disabled' : ''  }}>
+            <label class="form-check-label fw-bold" for="sg-cookies{{ sgCookiesLocalePrefix ? sgCookiesLocalePrefix }}-{{cookie.slug}}{{customId}}">
+                {{ cookie.title }}
+            </label>
+        </div>
+
+        {% if cookie.description %}
+        <div class="text-center">{{ cookie.description|raw }}</div>
+        {% endif %}
+
+        {% endfor %}
+
+        {% if disableSaveButton is empty %}
+
+            <button type="button" id="cookies-manage-save" class="btn btn-primary">
+                {{ 'janvince.smallgdpr::lang.settings.form_fields.save_settings'|trans }}
+            </button>
+
+        {% endif %}
+
+    </form>
+
+{% endif %}

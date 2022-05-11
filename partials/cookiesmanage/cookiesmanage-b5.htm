@@ -1,0 +1,16 @@
+{% if cookiesSettingsGet('cookies_manage_title', null) %}
+
+    <h1 class="h2 mb-4 text-center text-uppercase">
+        {{ cookiesSettingsGet('cookies_manage_title') }}
+    </h1>
+
+{% endif %}
+
+{% if cookiesSettingsGet('cookies_manage_content', null) %}
+
+    <div class="content text-center">{{ cookiesSettingsGet('cookies_manage_content')|raw }}</div>
+
+{% endif %}
+
+{% partial '@list-cookies'
+    disablePageReload = cookiesSettingsGet('cookies_manage_disable_page_reload', 0) %}

@@ -1,4 +1,4 @@
-<header class="container-fluid py-4 position-fixed">
+<header class="container-fluid py-4 position-fixed {{ this.page.id == 'homepage' ? 'homepage' }}">
     <div class="container-lg d-flex justify-content-between align-items-center">
         <div id="logo">
             <a href="{{ 'homepage'|page }}" class="d-block bg-secondary"></a>

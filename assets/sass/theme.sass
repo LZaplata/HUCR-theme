@@ -10,6 +10,9 @@
         &.btn-lg
             background-position: right -65%
 
+        &.btn-sm
+            background-position: right -30%
+
         &:hover
             background-position: right 30%
 
@@ -21,6 +24,9 @@
 
             &.btn-lg
                 background-position: right 40%
+
+            &.btn-sm
+                background-position: right 22%
 
         &.with-arrow
             &:hover
@@ -60,8 +66,14 @@
     @media (any-hover: hover)
         background-image: url("../images/btn-primary-bg.svg")
 
+        &.text-primary
+            transition: background-position .5s ease, color .5s ease
+
         &:hover
             background-position: right 32%
+
+            &.text-primary
+                color: $white !important
 
 .btn-outline-secondary
     @include button-variant(transparent, $secondary, $white, transparent, $secondary, $white, transparent, $secondary, $white)
@@ -116,6 +128,9 @@ header
 
         &--not-top
             background: $blue-dark
+
+    &:not(.homepage)
+        background: $blue-dark
 
     #logo
         a
@@ -544,3 +559,31 @@ header
                 -webkit-mask: url("../images/icons/facebook.svg")
                 mask-size: cover
                 -webkit-mask-size: cover
+
+#cookies-bar
+    @include media-breakpoint-down(md)
+        left: 20px
+
+#sg-settings-modal-cookiesbar
+    .modal-dialog
+        .modal-content
+            padding: 40px
+
+            .modal-header
+                padding: 0
+                border-bottom: none
+
+            .modal-body
+                padding: 0
+
+            .modal-footer
+                padding: 0
+                border-top: none
+
+    @include media-breakpoint-down(md)
+        .modal-dialog
+            margin: auto 20px
+            max-width: 100% !important
+
+#cookies
+    padding-top: 94px
