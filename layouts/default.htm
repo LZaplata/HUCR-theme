@@ -1,6 +1,8 @@
 [cookiesBar cookiesbar]
 
 [contactForm contactform]
+
+[seo]
 ==
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -10,6 +12,8 @@
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
 
+        {% component "seo" %}
+
         <meta property="og:url" content="https://www.hucr.cz" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="{{ this.page.meta_title }}" />
@@ -18,7 +22,7 @@
         <meta property="fb:app_id" content="504786834725984" />
 
         <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" />
-
+        
         <title>{{ this.page.title }} | HUMLNET CREATIVE s.r.o.</title>
 
         {% styles %}
